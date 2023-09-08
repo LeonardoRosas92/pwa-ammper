@@ -19,7 +19,8 @@ const useAuth = defineStore( 'auth' , {
             const response = await fetch( uri, {
                 method: 'POST',
                 headers: {
-                    'Content-type' : 'Application/json'
+                    'Content-type' : 'Application/json',
+                    'Access-Control-Allow-Origin': '*'
                 },
                 body: JSON.stringify({
                     'email' : email,
